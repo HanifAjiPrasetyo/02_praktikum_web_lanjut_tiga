@@ -66,3 +66,6 @@ Route::get('/about-us', function () {
 
 // Route Resource Only -> Halaman Contact us
 Route::resource('/contact-us', ContactController::class)->only('index');
+
+Route::get('/contact', [ContactController::class, 'form']);
+Route::post('/contact', [ContactController::class, 'store']);
